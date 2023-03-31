@@ -1,0 +1,15 @@
+# Ignore All
+* 
+
+# Except for...
+!.ignore
+!.gitignore
+!README.md
+
+# ... including if they are found in subdirs
+!*/
+
+# And Include...
+!helix/*
+!kitty/*
+!fish/*
