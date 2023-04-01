@@ -9,8 +9,11 @@ So far, I have added my dotfiles for:
 - [fish](https://fishshell.com/) *(shell)*
 - [kitty](https://sw.kovidgoyal.net/kitty/) *(terminal emulator)*
 - [helix](https://helix-editor.com/) *(modal editor)*
+- [neovim]() *(modal editor 2)*
 
 I will be adding more as I rice out my system. 
+
+I will finish nvim at a later time, helix is still superior imo
 
 # Install
 

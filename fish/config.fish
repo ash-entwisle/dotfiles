@@ -8,4 +8,4 @@ abbr --add 'hxfsh' 'hx ~/.config/fish'
 abbr --add 'cls' 'clear'
 abbr --add 'hxc' 'hx ~/.config/'
 abbr --add 'neofetch-apple' 'neofetch --ascii ~/.config/neofetch/trapple.ascii' 
-
+abbr --add 'nv' 'nvim'
