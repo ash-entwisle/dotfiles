@@ -10,6 +10,8 @@
 !*/
 
 # And Include...
-!helix/*
-!kitty/*
-!fish/*
+!helix/**
+!kitty/**
+!fish/**
+!neofetch/**
+!nvim/**
