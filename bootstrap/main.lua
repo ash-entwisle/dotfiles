@@ -63,4 +63,4 @@ if catZshRc != "fish" then
 end
 
 
-
+-- TODO: add rest of scripts here 
