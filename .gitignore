@@ -1,3 +1,7 @@
 /configs/zed/.tmp*
 /configs/zed/conversations/
 /configs/zed/embeddings/
+
+
+cl.pdf
+temp.md
