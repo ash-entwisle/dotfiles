@@ -1,0 +1,29 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 10
+color-modes = true
+scroll-lines = 1
+auto-save = false #!>> may change in future
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["spacer", "position", "spacer", "file-name", "file-encoding"]
+center = []
+right = ["workspace-diagnostics", "spacer", "diagnostics", "spacer", "spinner", "mode"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = "|"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
