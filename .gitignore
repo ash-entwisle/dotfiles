@@ -1,1 +1,3 @@
-./configs/zed/.tmp*
+/configs/zed/.tmp*
+/configs/zed/conversations/
+/configs/zed/embeddings/
