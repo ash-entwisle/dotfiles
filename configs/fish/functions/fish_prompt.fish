@@ -16,7 +16,7 @@ function fish_prompt --description 'Write out the prompt'
         if set -q fish_color_cwd_root
             set cwd_color (set_color $fish_color_cwd_root)
         end
-        set suffix '#>>'
+        set suffix '>#>'
     end
 
     # Color the prompt in red on error
