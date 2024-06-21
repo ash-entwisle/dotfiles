@@ -8,7 +8,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos.entwisle.dev";
+  networking.hostName = "nixos";
 
   time.timeZone = "Europe/London";
 
