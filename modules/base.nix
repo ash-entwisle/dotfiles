@@ -9,6 +9,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
 
