@@ -1,15 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    kitty
+    firefox
+    dolphin
+    discord
+    vesktop
+  ];
 
-  programs.kitty.enable = true;
-  programs.firefox.enable = true;
-  programs.dolphin.enable = true;
-  programs.nemo.enable = true;
 
-  # Discord Stuff (mainline client suuuuux)
-  programs.discord.enable = true;
-  programs.vesktop.enable = true;
+
 
 
 
