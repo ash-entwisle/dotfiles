@@ -29,7 +29,7 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-  }
+  };
 
   users.users.ash = {
     isNormalUser = true;
