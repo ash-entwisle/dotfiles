@@ -6,7 +6,7 @@
 
   outputs = { self, nixpkgs, ... }: 
   let lib = nixpkgs.lib;
-  {
+  in {
     nixosConfigurations = {
 
       workstation = lib.nixosSystem {
