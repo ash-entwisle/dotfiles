@@ -5,6 +5,8 @@
   environment.systemPackages = with pkgs; [
     wineWowPackages.stable
     winetricks
+    lutris
+    protontricks
   ];
   
   programs.steam = {
@@ -25,11 +27,6 @@
   programs.java.enable = true; 
 
   programs.gamemode.enable = true;
-
-  programs.lutris.enable = true;
-  programs.wineWowPackages.stable.enable = true;
-  programs.winetricks.enable = true;
-  programs.protontricks.enable = true;
 
 
 }
