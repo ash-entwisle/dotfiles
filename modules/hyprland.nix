@@ -13,7 +13,7 @@
 
   programs.hyprland = {
     enable = true;
-    xwayland = true;
+    xwayland.enable = true;
   };
 
   xdg.portal.enable = true;
