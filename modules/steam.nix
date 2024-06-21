@@ -17,7 +17,7 @@
   };
 
   programs.steam.package = pkgs.steam.override {
-    withPrimus = true;
+    # withPrimus = true;
     # extraPkgs = pkgs: [ bumblebee glxinfo ]; # for some reson this no work???
     withJava = true;
   };
