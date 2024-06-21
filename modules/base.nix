@@ -46,6 +46,7 @@
     wget
     git
     fish
+    zoxide
   ];
 
   environment.variables = {
