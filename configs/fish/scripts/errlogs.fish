@@ -3,13 +3,28 @@
 # check if the script mac or linux
 if test (uname) = "Darwin"
     # run ./errlogs_mac.fish with the provided argument
-    fish ./errlogs_mac.fish $argv
+    if test (count $argv) -ne 1
+        echo "Usage: script_name <logname>"
+        exit 1
+    end
+
+    # Check if the argument is a string
+    set arg $argv[1]
+
+    if not echo $arg | grep -qE '^[a-zA-Z]+$'
+        echo "Error: The argument must be a string."
+        exit 1
+    end
+
+    # cat the log file
+    cat /var/log/$arg.log
+
     exit 0
 end
 
 # check if script is run as root/sudo, if not run as root
 if test (id -u) -ne 0
-    sudo fish ./errlogs.fish $argv
+    sudo errlogs $argv
     exit 0
 end
 
