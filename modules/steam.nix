@@ -7,6 +7,14 @@
     winetricks
     lutris
     protontricks
+    lsb-release
+    pciutils
+    procps
+    gamescope
+    mangohud
+    vkbasalt-cli
+    vmtouch
+    prismlauncher
   ];
   
   programs.steam = {

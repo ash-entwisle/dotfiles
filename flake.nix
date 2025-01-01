@@ -1,11 +1,14 @@
 {
   description = "Ash's Nixos configuration";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs, ... }: 
-  let lib = nixpkgs.lib;
+  let 
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
 
@@ -16,6 +19,7 @@
           ./modules/hyprland.nix
           ./modules/programs.nix
           ./modules/steam.nix
+          ./modules/devenv.nix
         ];
       };
 
@@ -34,6 +38,7 @@
       #   ];
       # };
 
+      devShells.x86_64-Linux.default = (import ./shell.nix {inherit pkgs;});
     };
   };
 }

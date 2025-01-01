@@ -48,6 +48,7 @@
     git
     fish
     zoxide
+    bottom
   ];
 
   environment.variables = {
@@ -81,5 +82,18 @@
   system.stateVersion = "24.05";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+  # Systemd Service to Disable ASPM for AX210
+  systemd.services.disable-aspm = {
+    description = "Disable ASPM on AX210 at boot";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      # ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.pciutils}/bin/setpci -s 08:00.0 0x50.B=0x40'";
+      ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.pciutils}/bin/setpci -s \"$(${pkgs.pciutils}/bin/lspci | ${pkgs.gawk}/bin/awk \\'/AX210/{print \\$1}\\')\" 0x50.B=0x40'";
+      ExecStop = "${pkgs.bash}/bin/bash -c '${pkgs.pciutils}/bin/setpci -s \"$(${pkgs.pciutils}/bin/lspci | ${pkgs.gawk}/bin/awk \\'/AX210/{print \\$1}\\')\" 0x50.B=0x42'";
+      RemainAfterExit = "yes";
+    };
+  };
 
 }

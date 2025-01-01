@@ -4,10 +4,11 @@ end
 
 eval 'zoxide init fish | source'
 
-abbr --add 'la' 'ls -al'
-abbr --add 'ssh' 'kitty +kitten ssh' 
-abbr --add 'hxfsh' 'hx ~/.config/fish'
-abbr --add 'cls' 'clear'
-abbr --add 'hxc' 'hx ~/.config/'
-abbr --add 'nv' 'nvim'
-abbr --add 'cd' 'z'
+abbr --add la 'ls -al'
+abbr --add ssh 'kitty +kitten ssh'
+abbr --add hxfsh 'hx ~/.config/fish'
+abbr --add cls clear
+abbr --add hxc 'hx ~/.config/'
+abbr --add nv nvim
+abbr --add cd z
+abbr --add devenv 'nix-shell ~/.dotfiles/shell.nix'

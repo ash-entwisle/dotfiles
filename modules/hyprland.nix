@@ -9,6 +9,8 @@
     libnotify
     hyprpaper
     wofi
+    grimblast
+    pavucontrol  
   ];
 
   programs.hyprland = {
@@ -18,6 +20,7 @@
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config.common.default = [ "*" ];
 
   sound.enable = true;
   security.rtkit.enable = true;
@@ -38,8 +41,8 @@ hardware.opengl = {
   enable = true;
 
   ## radv: an open-source Vulkan driver from freedesktop
-  driSupport = true;
-  driSupport32Bit = true;
+  # driSupport = true;
+  # driSupport32Bit = true;
 
   ## amdvlk: an open-source Vulkan driver from AMD
   extraPackages = [ pkgs.amdvlk ];
