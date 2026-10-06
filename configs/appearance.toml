@@ -1,0 +1,43 @@
+# ==============================================================================
+# Appearance
+# Blur uses a smaller radius than the built-in default.
+# https://docs.noctalia.dev/umbriel/appearance/
+
+[appearance]
+prefer_no_csd = true
+border_width = 2
+outer_border_width = 0
+corner_radius = 2
+drag_opacity = 0
+opaque_fullscreen = false
+
+[appearance.blur]
+radius = 0
+
+# Choose the background color shown if the lock screen takes too long to appear.
+# [colors]
+# backdrop = "#000000FF"
+
+# ==============================================================================
+# Effects
+# Every effect is off until a preset is selected. Include a bundled preset
+# (adjust /usr for the package prefix), then select it by name.
+# https://docs.noctalia.dev/umbriel/effects/
+# [include]
+# files = ["/usr/share/umbriel/effects/border/pulse/effect.toml"]
+# [effects]
+# border = "pulse"
+
+# ==============================================================================
+# Overview
+# Built-in overview and animation values are used. The top-left hot corner opens
+# the overview after a short delay.
+# Overview: https://docs.noctalia.dev/umbriel/workspaces-overview/
+# Animation: https://docs.noctalia.dev/umbriel/animation/
+[hot_corners.top_left]
+enabled = true
+delay_ms = 500
+action = "overview-open"
+
+[animation]
+enabled=false
